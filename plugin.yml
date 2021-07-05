@@ -1,0 +1,16 @@
+name: EntityMonitor
+main: JavierLeon9966\EntityMonitor\EntityMonitor
+author: JavierLeon9966
+version: 1.0.0
+api: [3.0.0-ALPHA5. 3.0.0-ALPHA6. 3.0.0-ALPHA7, 3.0.0-ALPHA8, 3.0.0-ALPHA9, 3.0.0-ALPHA10, 3.0.0-ALPHA11, 3.0.0-ALPHA12, 3.0.0]
+description: Plugin that monitors every chunk for potential amount of entities and tiles
+website: https://github.com/JavierLeon9966/EntityMonitor
+commands:
+  monitor:
+    usage: "/monitor [entity|tile] [ticking: bool]"
+    description: Monitor levels that has chunks with most entities and tiles
+    permission: entitymonitor.command.monitor
+permissions:
+  entitymonitor.command.monitor:
+    description: Allows the user to monitor levels
+    default: op
