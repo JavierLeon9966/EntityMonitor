@@ -3,7 +3,7 @@ Plugin that monitors every chunk with potential amount of entities and tiles
 
 This plugin is very simple that the only thing you need is one command:
 
-/entity [entity|tile] [ticking: bool]
+/monitor [entity|tile] [ticking: bool]
 
 ## API
 ```php
