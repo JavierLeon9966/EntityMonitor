@@ -5,5 +5,8 @@ branches:
 - "legacy/PM3"
 projects:
   EntityMonitor:
-    path: ""
+    libs:
+      - src: Paroxity/Commando/Commando
+        branch: PM-4.0
+        version: ^3.0.0
 ...
