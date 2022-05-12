@@ -1,6 +1,5 @@
 name: EntityMonitor
 main: JavierLeon9966\EntityMonitor\EntityMonitor
-src-namespace-prefix: JavierLeon9966\EntityMonitor
 author: JavierLeon9966
 version: 2.0.0
 api: 4.0.0
