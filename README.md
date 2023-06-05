@@ -8,7 +8,9 @@ This plugin is very simple that the only thing you need is one command:
 ## API
 ```php
 use JavierLeon9966\EntityMonitor\EntityMonitor;
-use pocketmine\level\Level;
+use pocketmine\world\World;
 
-$chunk = EntityMonitor::getMonitoredEntities(Level $level, bool $entities = true, bool $ticking = false, ?int &$count = null): ?Chunk;
+[$chunkHash, $entityCount] = EntityMonitor::getChunkWithMostEntities(World $world, bool $ticking): array{?int, int};
+
+[$chunkHash, $entityCount] = EntityMonitor::getChunkWithMostTiles(World $world, bool $ticking): array{?int, int};
 ```

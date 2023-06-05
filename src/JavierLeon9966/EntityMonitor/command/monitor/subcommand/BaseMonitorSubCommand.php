@@ -13,6 +13,11 @@ use pocketmine\world\World;
 
 abstract class BaseMonitorSubCommand extends BaseSubCommand{
 
+	/** @param list<string> $aliases */
+	public function __construct(protected readonly EntityMonitor $plugin, string $name, string $description = "", array $aliases = []){
+		parent::__construct($name, $description, $aliases);
+	}
+
 	protected function sendChunksInfo(CommandSender $sender, bool $searchForEntities, bool $ticking): void{
 		$getChunk =  \Closure::fromCallable([EntityMonitor::class, $searchForEntities ?
 			'getChunkWithMostEntities' :

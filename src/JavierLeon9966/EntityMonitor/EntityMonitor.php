@@ -11,7 +11,6 @@ use JavierLeon9966\EntityMonitor\command\monitor\MonitorCommand;
 use pocketmine\entity\Entity;
 use pocketmine\plugin\PluginBase;
 use pocketmine\block\tile\Tile;
-use pocketmine\world\format\Chunk;
 use pocketmine\world\World;
 
 final class EntityMonitor extends PluginBase{
@@ -26,7 +25,7 @@ final class EntityMonitor extends PluginBase{
 	 * @phpstan-return array{0: int|null, 1: int}
 	 */
 	public static function getChunkWithMostEntities(World $world, bool $ticking): array{
-		$count = \Closure::fromCallable('count');
+		$count = count(...);
 		$callbackFilter = fn(Entity $entity) => isset($world->updateEntities[$entity->getId()]);
 
 		$countEntities = $ticking ? $count : fn(array $entities) => $count(array_filter($entities, $callbackFilter));
@@ -50,9 +49,8 @@ final class EntityMonitor extends PluginBase{
 	 */
 	public static function getChunkWithMostTiles(World $world, bool $ticking): array{
 		$prop = new \ReflectionProperty(World::class, 'scheduledBlockUpdateQueueIndex');
-		$prop->setAccessible(true);
 		$scheduledBlockUpdateQueueIndex = $prop->getValue($world);
-		$count = \Closure::fromCallable('count');
+		$count = count(...);
 		$callbackFilter = fn(Tile $tile) => isset($scheduledBlockUpdateQueueIndex[World::blockHash(($pos = $tile->getPosition())->x, $pos->y, $pos->z)]);
 
 		$countTiles = $ticking ? $count : fn(array $tiles) => $count(array_filter($tiles, $callbackFilter));

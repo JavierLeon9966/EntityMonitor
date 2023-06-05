@@ -8,7 +8,10 @@ use pocketmine\command\CommandSender;
 
 class EntitySubCommand extends BaseMonitorSubCommand{
 
+	/** @param array<array-key, mixed> $args */
 	public function onRun(CommandSender $sender, string $aliasUsed, array $args): void{
+		/** @var bool $ticking */
+		$ticking = $args['ticking'] ?? false;
 		$this->sendChunksInfo($sender, true, $args['ticking'] ?? false);
 	}
 

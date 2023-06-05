@@ -6,7 +6,7 @@ branches:
 projects:
   EntityMonitor:
     libs:
-      - src: Paroxity/Commando/Commando
-        branch: PM-4.0
-        version: ^3.0.0
+      - src: ACM-PocketMine-MP/Commando/Commando # Temporary until the original updates
+        version: ^3.2.0
+        branch: PM5
 ...
