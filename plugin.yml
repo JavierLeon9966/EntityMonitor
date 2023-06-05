@@ -1,7 +1,7 @@
 name: EntityMonitor
 main: JavierLeon9966\EntityMonitor\EntityMonitor
 author: JavierLeon9966
-version: 2.0.1
+version: 2.1.0
 api: 4.0.0
 description: Plugin that monitors every chunk for potential amount of entities and tiles
 website: https://github.com/JavierLeon9966/EntityMonitor
