@@ -3,7 +3,7 @@ main: JavierLeon9966\EntityMonitor\EntityMonitor
 author: JavierLeon9966
 version: 2.3.0
 api: 5.0.0
-mcpro-protocols: [594, 618]
+mcpro-protocols: [594, 618, 622]
 description: Plugin that monitors every chunk for potential amount of entities and tiles
 website: https://github.com/JavierLeon9966/EntityMonitor
 permissions:
