@@ -1,7 +1,7 @@
 name: EntityMonitor
 main: JavierLeon9966\EntityMonitor\EntityMonitor
 author: JavierLeon9966
-version: 2.5.0
+version: 2.6.0
 api: 5.0.0
 mcpe-protocol: [594, 618, 622, 630, 649]
 description: Plugin that monitors every chunk for potential amount of entities and tiles
